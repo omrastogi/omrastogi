@@ -3,7 +3,7 @@
 
 ## I'm a Electronics and Communication Engineering Student
 
-- Jack of most
+- Jack of many
 - Acing in Machine Learning and Data Sciences
 - A chatbot under is construction as on Sept 2020
 - Learning Data Structures and Algorithms
