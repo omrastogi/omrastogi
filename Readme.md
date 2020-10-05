@@ -1,5 +1,5 @@
 
-### Hi there, I'm Om Rastogi 👋
+# Hi there, I'm Om Rastogi 👋
 
 ## I'm a Electronics and Communication Engineering Student
 
