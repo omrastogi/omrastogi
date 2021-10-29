@@ -1,13 +1,11 @@
 
 # Hi there, I'm Om Rastogi 👋
 
-## I'm a Electronics and Communication Engineering Student
+## I'm a Data Scientist
 
 - Jack of many
 - Acing in Machine Learning and Data Sciences
 - A chatbot under is construction as on Sept 2020
-- Learning Data Structures and Algorithms Cause Placements
-- Heading to become a deep learning expert and machine learning engineer
 
 <br>
 
