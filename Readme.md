@@ -5,7 +5,7 @@
 
 - Jack of many
 - Acing in Machine Learning and Data Sciences
-- A chatbot under is construction as on Sept 2020
+- Chatbot side project almost finished as of 2021
 
 <br>
 
