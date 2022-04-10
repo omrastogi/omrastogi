@@ -5,7 +5,6 @@
 
 - Jack of many
 - Acing in Machine Learning and Data Sciences
-- Chatbot side project almost finished as of 2021
 
 <br>
 
