@@ -11,7 +11,9 @@
   <meta content="" name="description">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
+    rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,13 +33,164 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/header.png">
 
-  <!-- =======================================================
-    Name: Om Rastogi  
-    ======================================================= -->
-</head>
+
+  <!-- Code For Chatbot Starts--------------------------------------------------------------------------- -->
+  <!-- Imported For CHATBOT -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+  <!-- ------------------------>
+
+  <!-- CHATBOT Styles ------------------------------------------------------------------------------------------->
+  <style>
+    .open-button {
+      background-color: #2d759f;
+      color: white;
+      font-size: 18px;
+      /*padding: 16px 20px;*/
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      width: 400px;
+      height: 40px;
+      z-index: 3000;
+    }
+
+    .close-button {
+      background-color: #c3deee;
+      color: black;
+      font-size: 18px;
+      /*padding: 16px 20px;*/
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      width: 400px;
+      height: 40px;
+      z-index: 3000;
+
+    }
+
+    .close-button:hover,
+    .open-button:hover {
+      opacity: 10;
+    }
+
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      z-index: 3000;
+
+    }
+
+    input[type=text] {
+      height: 40px;
+      width: 100%;
+      /*background-color: #3b638f;*/
+
+      opacity: 100%;
+      /*color: white;*/
+    }
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+      width: 100%;
+      background-color: #4e95e6;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      /*border: 1px solid;*/
+    }
+
+
+    /*---------------------------*/
+
+    .message_holder {
+      margin-bottom: 2em;
+      opacity: 100%;
+    }
+
+    .chat {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      opacity: 1.0;
+      background: #f1f0e8;
+      z-index: 9;
+
+    }
+
+    .chat-r {
+      display: flex;
+    }
+
+    .chat-r .sp {
+      flex: 1;
+    }
+
+    .chat-l {
+      display: flex;
+    }
+
+    .chat-l .sp {
+      flex: 1;
+    }
+
+    .mess {
+      max-width: 70%;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+
+      border-radius: 15px;
+      font-weight: bold;
+      margin-bottom: 3px;
+      cursor: pointer;
+    }
+
+    .mess-l {
+      background: #cce5ff;
+      border-bottom-left-radius: 0;
+    }
+
+    .mess p {
+      /*word-break: break-all;*/
+      /*text-align:justify; */
+      color: black;
+      font-size: 15px;
+      overflow-x: hidden;
+
+    }
+
+    .mess-r {
+      /*User's messages*/
+      background: #cccccc;
+      border-bottom-right-radius: 0;
+    }
+  </style>
+
+
+  <!-- CHATBOT STYLE ENDS -------------------------------------------------------------------------------->
+
 
 <body>
-<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
 
   <!-- start section navbar -->
@@ -52,8 +205,9 @@
         <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
 
         <ul class="nav-menu list-unstyled">
-          <li><a href="#header" class="smoothScroll">Home</a></li>
-          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#about" class="smoothScroll">Home</a></li>
+          <li><a href="#experience" class="smoothScroll">Experience</a></li>
+          <li><a href="#skills" class="smoothScroll">Skills</a></li>
           <li><a href="#portfolio" class="smoothScroll">Projects</a></li>
           <li><a href="#journal" class="smoothScroll">Articles</a></li>
           <li><a href="#contact" class="smoothScroll">Contact</a></li>
@@ -65,32 +219,9 @@
   <!-- End section navbar -->
 
 
-<!-- start section header -->
-  <div id="header" class="home">
-
-    <div class="container">
-      <div class="header-content">
-        <h1>I'm <span class="typed"></span></h1>
-        <p>Programmer, Data Scientist, Problem Solver</p>
-
-        <ul class="list-unstyled list-social">
-          <!-- <li><a href="#"><i class="ion-social-facebook"></i></a></li> -->
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com/i_am_omrastogi/?hl=en"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="https://github.com/omrastogi"><i class="ion-social-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/om-rastogi-a886b4b2/"><i class="ion-social-linkedin"></i></a></li>
-          <!-- <li><a href="https://medium.com/@omrastogi"><ion-icon name="logo-medium"></ion-icon></a></li> -->
-        </ul>
-        <div class="row download">
-            <a href="data/OmRastogi_Resume.pdf" download="resume-omrastogi">Download Resume</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End section header -->
-
 
   <!-- start section about us -->
+
   <div id="about" class="paddsection">
     <div class="container">
       <div class="row justify-content-between">
@@ -103,83 +234,241 @@
           </div>
         </div>
 
+        <!-- start profile intro -->
         <div class="col-lg-7">
-          <div class="about-descr">
-
-            <p class="p-heading">Student of Engineering in Electronics and Communication</p>
-            <p class="separator">
-            	A machine learning enthusiast with a background in Electronics and Communication. In past I have worked on several automation projects in embedded systems and IoT, now I am working to create intelligent solutions with Machine Learning and Data Science. I am a fast learning person, who yearns to create solutions in all aspects of the industry for a better life and better society at large. I share innovative ideas, solutions, and projects on medium, also I like to share data pattern insights in Kaggle notebooks.
-				<br>
-				I am passionate toward my work and my vision. Reading is an hobby, I read online articles and well know books.
-				I also like listening and ocasionally playing music. 
-			</p>
-
+          <div class="container">
+            <div class="header-content">
+              <h1>I'm <span class="typed"></span></h1>
+              <p>Programmer, Data Scientist, Problem Solver</p>
+              <ul class="list-unstyled list-social">
+                <!--          &lt;!&ndash; <li><a href="#"><i class="ion-social-facebook"></i></a></li> &ndash;&gt;-->
+                <!--          <li><a href="#"><i class="ion-social-twitter"></i></a></li>-->
+                <li><a href="https://www.instagram.com/i_am_omrastogi/?hl=en">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a></li>
+                <li><a href="https://github.com/omrastogi">
+                    <ion-icon name="logo-github"></ion-icon></i>
+                  </a></li>
+                <li><a href="https://www.linkedin.com/in/om-rastogi-a886b4b2/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a></li>
+                <li><a href="https://medium.com/@omrastogi">
+                    <ion-icon name="logo-medium"></ion-icon>
+                  </a></li>
+              </ul>
+              <div class="download">
+                <a href="data/OmRastogi_Resume.pdf" download="resume-omrastogi">Download Resume</a>
+              </div>
+            </div>
           </div>
+        </div>
+        <div>
+        </div>
+        <!-- end profile intro -->
+
+        <div class="about-descr">
+          <p class="p-heading">BELIEF</p>
+          <p class="seperator">
+            Time is so precious, can't waste it doing meaningless things.
+            I believe in creating a world, where creativity and imagination replace repetitive work.
+            <br>
+            Artificial Intelligence to me seems the most effective type of automation
+            i.e. to replace repetitive cognitive tasks in an attempt to heighten human intellectual capability.
+          </p>
+          <p class="p-heading">ABOUT WORK</p>
+          <p class="separator">
+            Currently working as a Data Scientist, I am working on problems like OCR, NMT, and Document Structure
+            Segmentation. My current work profile is to research the problems,
+            implement various research papers and execute our own ideas to optimize the solutions.
+            <br>
+            I have previously worked on signal processing, several Computer Vision problems like object detection and
+            classification, worked on
+            Time Series Forecasting for sale forecasting and created Dashboarding Systems.
+            <br>
+            I completed my graduation in 2021 with major a in Electronics and Communication. In college, I created a lot
+            of DIY electronic projects like LFRs, automated BMI machines, flushing systems, Drone and all kinds of
+            things I could think of.
+            I mainly used Arduino or ESP32, I also tried my hands on MSP430, Raspberry Pi, 8081, and atmega2560.
+          </p>
+          <p class="p-heading">ABOUT ME</p>
+          <p class="separator">
+            - I like to read books(non-fiction), some of my favorites are ‘Sapien” by Yuval Noah Harari, “Mastery” by
+            Robert Greene, and “The Alchemist”.
+            <br>- I like to write. Find my articles on medium if you can.
+            <br>- I try to optimize over efficiency and lately effectivity
+            <br>- I am obsessed with music, lately listening to Droeloe, Kygo, Linkin park, and 200 more XD:
+            <br>- I also strongly believe that if an idea has conviction, it is meant to be implemented
+          </p>
+          <p class="p-heading">I AM CURIOUS ABOUT</p>
+          <p class="separator">
+            - AI
+            <br>- Softwares
+            <br>- Airplanes and rockets
+            <br>- Astronomy
+            <br>- Aliens
+            <br>- Robotics
+            <br>- How to run a Business
+            <br>- Psychology and how our brain work
+          </p>
+
 
         </div>
       </div>
+
     </div>
   </div>
+
   <!-- end section about us -->
 
 
-  <!-- start section services -->
-  <div id="services">
+  <!-- start section skills -->
+  <div id="skills">
     <div class="container">
-    	<div class="section-title">
-        	<h2>Skills</h2>
-      	</div>
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
 
-        <div class="services-carousel owl-theme">
+      <div class="services-carousel owl-theme">
 
-          <div class="services-block">
+        <div class="services-block">
 
-            <i class="icon ion-social-python"></i>
-            <span>Programming</span>
-            <p class="separator">Python | C | Data Structure | Algorithms</p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="icon ion-code"></i>
-            <span>WEB DEVELOPMENT</span>
-            <p class="separator">Django | HTML | CSS | JavaSript
-            </p>
-
-          </div>
-
-       
-
-          <div class="services-block">
-
-            <i class="ion-ios-flower-outline"></i>
-            <span>MACHINE LEARNING</span>
-            <p class="separator">Scikit Learn | Numpy | Pandas | Matplotlib | Seaborn</p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="ion-social-codepen-outline"></i>
-            <span>Embedded Systems</span>
-            <p class="separator">Circuit Design | Atmega2560 | Arduino</p>
-
-          </div>
+          <span>Programming</span>
+          <p class="separator">Python, C, Data Structure, Algorithms</p>
 
         </div>
+
+
+        <div class="services-block">
+
+          <span>AWS</span>
+          <p class="separator">
+            Amazon EC2, AWS Lambda, Amazon S3
+          </p>
+
+        </div>
+
+        <div class="services-block">
+
+          <span>DEPLOYMENT AND TOOLS</span>
+          <p class="separator">
+            Linux, Docker, Git
+          </p>
+
+        </div>
+
+
+
+        <div class="services-block">
+
+          <span>WEB DEVELOPMENT</span>
+          <p class="separator">Flask, HTML, CSS, JavaSript
+          </p>
+
+        </div>
+
+
+
+        <div class="services-block">
+
+          <span>MACHINE LEARNING FRAMEWORKS</span>
+          <p class="separator">
+            Scikit Learn, Numpy, Pandas, Matplotlib, Seaborn, Tensorflow, Pytorch
+          </p>
+
+        </div>
+
+        <div class="services-block">
+
+          <span>DEEP LEARNING ALGORITHMS</span>
+          <p class="separator">
+            FeedForward Networks, Convolution Networks, Transformers, LSTMs
+          </p>
+
+        </div>
+
+        <div class="services-block">
+
+          <span>Embedded Systems</span>
+          <p class="separator">
+            Circuit Design, Atmega2560, Arduino
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
-  <!-- end section services -->
+  <div>
+    <p>""</p>
+  </div>
+  <!-- end section skills -->
 
+
+  <!-- start section exp -->
+  <div id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
+      </div>
+
+
+
+      <div class="row services-block">
+        <div class="col-sm-3 col-md-2 img-col ">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="col-sm-9 col-md-10">
+          <span>Data Scientist at EZ Works (July 2021 - Present)</span>
+          <p class="separator">
+            • Developing a new Multilingual Transformer based model to further improve translations
+            • Trained NMT models to converge to provide a bleu score of above 35
+            • Research and Development on OCR solutions for multiple languages
+            • Research and Development on Document Structure Segmentation Problem
+            • Led the development of EZ-Flip producing 100% successful conversions
+          </p>
+        </div>
+      </div>
+
+
+      <div class="row services-block">
+        <div class="col-sm-3 col-md-2 img-col ">
+          <a href="index.html"><img src="images/project/2.jpeg" alt="logo"></a>
+        </div>
+        <div class="col-sm-9 col-md-10">
+          <span>Machine Learning Intern at Cybercure Technologies (Dec 2020 - June 2021)</span>
+          <p class="separator">
+            • Deployed an end-to-end solution for Sales Forecasting and Inventory Logistics
+            • Created Interactive Dashboard
+            • Designed, Regression Models and Time Series Forecasting Models
+            • Business and Retail Analytics
+            • Data Pipelining and Data Warehousing
+          </p>
+        </div>
+      </div>
+
+      <!--        <div class="services-block">-->
+      <!--          <span>DEPLOYMENT AND TOOLS</span>-->
+      <!--          <p class="separator">-->
+      <!--            Linux, Docker, Git-->
+      <!--          </p>-->
+      <!--        </div>-->
+
+
+
+
+    </div>
+  </div>
+
+  <!-- end section exp -->
 
   <!-- start section portfolio -->
-  <div id="portfolio" class="text-center paddsection">
+  <!-- start section portfolio -->
+  <div id="portfolio" class="paddsection">
 
     <div class="container">
-      <div class="section-title text-center">
+      <div class="section-title">
         <h2>My Projects</h2>
       </div>
     </div>
@@ -194,63 +483,133 @@
               <li class="filter filter-active" data-filter=".all">all</li>
               <li class="filter" data-filter=".ml">machine learning</li>
               <li class="filter" data-filter=".embedded">embedded systems</li>
-              <li class="filter" data-filter=".apps">application</li>
-              <li class="filter" data-filter=".webapp">web applications</li>
-              <li class="filter" data-filter=".others">others</li>
+              <li class="filter" data-filter=".cv">computer vision</li>
             </ul>
 
           </div>
 
           <div class="portfolio-container">
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all ml">
-              <a href="https://github.com/omrastogi/Whatsapp-Chat-Analysis">
-                <img src="images/project/1.jpeg" alt="img" width=400px height = 300px>
-                <h3>Whatsapp Chat Analysis</h3>
-              </a>
+            <div class="col-lg-12 col-md-12 portfolio-thumbnail all cv">
+              <div class="row card-element">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://github.com/omrastogi/Retail-Product-Identification-Project" target="_blank">
+                    <img src="images/project/7.jpeg" alt="img" width=400px height=300px>
+                  </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 card-description">
+                  <a href="https://github.com/omrastogi/Retail-Product-Identification-Project" target="_blank">
+                    <h3>Product Identification Systems at Retail</h3>
+                  </a>
+                  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore a molestiae ab officia
+                    illo ullam eius facilis aliquam provident corporis quidem iste dolor labore vel ad nostrum
+                    architecto aspernatur eum, corrupti repellendus consequuntur cupiditate! Ea rerum minus illum
+                    aperiam corporis?
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all ml">
-              <a href="https://github.com/omrastogi/instumentalmusic">
-                <img src="images/project/2.jpeg"  alt="img" width=400px height = 300px>
-                <h3>Intrument Sound Identification</h3>
-              </a>
+            <div class="col-lg-12 col-md-12 portfolio-thumbnail all ml">
+              <div class="row card-element">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://github.com/omrastogi/Whatsapp-Chat-Analysis" target="_blank">
+                    <img src="images/project/1.jpeg" alt="img" width=400px height=300px>
+                  </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 card-description">
+                  <a href="https://github.com/omrastogi/Whatsapp-Chat-Analysis" target="_blank">
+                    <h3>Whatsapp Chat Analysis</h3>
+                  </a>
+                  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore a molestiae ab officia
+                    illo ullam eius facilis aliquam provident corporis quidem iste dolor labore vel ad nostrum
+                    architecto aspernatur eum, corrupti repellendus consequuntur cupiditate! Ea rerum minus illum
+                    aperiam corporis?
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all ml">
-              <a href="https://github.com/omrastogi/KNN-algorithm-to-classify-number">
-                <img src="images/project/3.jpeg" alt="img" width=400px height = 300px>
-                <h3>KNN Algorithm to Classify Number</h3>
-              </a>
+            <div class="col-lg-12 col-md-12 portfolio-thumbnail all ml">
+              <div class="row card-element">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://github.com/omrastogi/instumentalmusic" target="_blank">
+                    <img src="images/project/2.jpeg" alt="img" width=400px height=300px>
+                  </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 card-description">
+                  <a href="https://github.com/omrastogi/instumentalmusic" target="_blank">
+                    <h3>Intrument Sound Identification</h3>
+                  </a>
+                  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore a molestiae ab officia
+                    illo ullam eius facilis aliquam provident corporis quidem iste dolor labore vel ad nostrum
+                    architecto aspernatur eum, corrupti repellendus consequuntur cupiditate! Ea rerum minus illum
+                    aperiam corporis?
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all applications others">
-              <a href="https://github.com/omrastogi/Maze-Finder---Computer-Vision">
-                <img src="images/project/4.jpeg" alt="img" width=400px height = 300px>
-                <h3>Maze Finder</h3>
-              </a>
+            <div class="col-lg-12 col-md-12 portfolio-thumbnail all ml">
+              <div class="row card-element">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://www.kaggle.com/omrastogi/cicids-pipeline-90-f1-score" target="_blank">
+                    <img src="images/project/3.jpeg" alt="img" width=400px height=300px>
+                  </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 card-description">
+                  <a href="https://www.kaggle.com/omrastogi/cicids-pipeline-90-f1-score" target="_blank">
+                    <h3>Intrusion Detection System</h3>
+                  </a>
+                  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore a molestiae ab officia
+                    illo ullam eius facilis aliquam provident corporis quidem iste dolor labore vel ad nostrum
+                    architecto aspernatur eum, corrupti repellendus consequuntur cupiditate! Ea rerum minus illum
+                    aperiam corporis?
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all webapp">
-              <a href="https://github.com/omrastogi/Deals-International/tree/master/CraigProject">
-                <img src="images/project/5.jpeg" alt="img" width=400px height = 300px>
-                <h3>Deals International WebApp</h3>
-              </a>
+            <div class="col-lg-12 col-md-12 portfolio-thumbnail all cv">
+              <div class="row card-element">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://github.com/omrastogi/Maze-Finder---Computer-Vision" target="_blank">
+                    <img src="images/project/4.jpeg" alt="img" width=400px height=300px>
+                  </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 card-description">
+                  <a href="https://github.com/omrastogi/Maze-Finder---Computer-Vision" target="_blank">
+                    <h3>Maze Finder</h3>
+                  </a>
+                  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore a molestiae ab officia
+                    illo ullam eius facilis aliquam provident corporis quidem iste dolor labore vel ad nostrum
+                    architecto aspernatur eum, corrupti repellendus consequuntur cupiditate! Ea rerum minus illum
+                    aperiam corporis?
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all embedded">
-              <a href="https://medium.com/@omrastogi/too-lazy-to-flush-product-design-ec6f21c8475f">
-                <img src="images/project/6.jpeg" alt="img" width=400px height = 300px>
-                <h3>Automated Flush Design</h3>
-              </a>
+            <div class="col-lg-12 col-md-12 portfolio-thumbnail all embedded">
+              <div class="row card-element">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <a href="https://medium.com/@omrastogi/too-lazy-to-flush-product-design-ec6f21c8475f" target="_blank">
+                    <img src="images/project/6.jpeg" alt="img" width=400px height=300px>
+                  </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 card-description">
+                  <a href="https://medium.com/@omrastogi/too-lazy-to-flush-product-design-ec6f21c8475f" target="_blank">
+                    <h3>Automated Flush Design</h3>
+                  </a>
+                  <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore a molestiae ab officia
+                    illo ullam eius facilis aliquam provident corporis quidem iste dolor labore vel ad nostrum
+                    architecto aspernatur eum, corrupti repellendus consequuntur cupiditate! Ea rerum minus illum
+                    aperiam corporis?
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all apps">
-              <a href="https://github.com/omrastogi/Email-BroadCaster">
-                <img src="images/project/7.jpeg" alt="img" width=400px height = 300px>
-                <h3>Email Broadcaster</h3>
-              </a>
-            </div>
 
           </div>
         </div>
@@ -261,7 +620,7 @@
   <!-- End section portfolio -->
 
 
-  <!-- start section journal -->
+  <!-- start section Articles -->
   <div id="journal" class="text-left paddsection">
 
     <div class="container">
@@ -277,13 +636,15 @@
           <div class="col-lg-4 col-md-6">
             <div class="journal-info">
 
-              <a href="https://medium.com/analytics-vidhya/why-feature-scaling-is-required-for-training-ml-models-d004212f2cd6">
-              	<img src="images/article-1.jpg" class="img-responsive" alt="img" width=500px height = 300px></a>
+              <a
+                href="https://medium.com/analytics-vidhya/why-feature-scaling-is-required-for-training-ml-models-d004212f2cd6">
+                <img src="images/article-1.jpg" class="img-responsive" alt="img" width=500px height=300px></a>
 
               <div class="journal-txt">
 
                 <h4><a href="blog-single.html">Why Feature Scaling is required for Training ML Models</a></h4>
-                <p class="separator">A question that all the Data Science learners have is, why is there a need to normalize data.
+                <p class="separator">A question that all the Data Science learners have is, why is there a need to
+                  normalize data.
                 </p>
 
               </div>
@@ -294,12 +655,14 @@
           <div class="col-lg-4 col-md-6">
             <div class="journal-info">
 
-              <a href="https://medium.com/@omrastogi/why-cant-we-use-accelerator-data-to-measure-distances-using-android-74601c5588e6">
-              	<img src="images/article-2.jpg" class="img-responsive" alt="img" width=500px height = 300px></a>
+              <a
+                href="https://medium.com/@omrastogi/why-cant-we-use-accelerator-data-to-measure-distances-using-android-74601c5588e6">
+                <img src="images/article-2.jpg" class="img-responsive" alt="img" width=500px height=300px></a>
 
               <div class="journal-txt">
 
-                <h4><a href="#blog-single.html">Why Can’t We Use Accelerator Data To Measure Distances using Android</a></h4>
+                <h4><a href="#blog-single.html">Why Can’t We Use Accelerator Data To Measure Distances using Android</a>
+                </h4>
                 <p class="separator">What happens when things don’t work out as planned…
                 </p>
 
@@ -311,13 +674,15 @@
           <div class="col-lg-4 col-md-6">
             <div class="journal-info">
 
-              <a href="https://medium.com/analytics-vidhya/coding-logistic-regression-in-python-from-scratch-57284dcbfbff">
-              	<img src="images/article-3.jpg" class="img-responsive" alt="img" width=500px height = 300px></a>
+              <a
+                href="https://medium.com/analytics-vidhya/coding-logistic-regression-in-python-from-scratch-57284dcbfbff">
+                <img src="images/article-3.jpg" class="img-responsive" alt="img" width=500px height=300px></a>
 
               <div class="journal-txt">
 
                 <h4><a href="blog-single.html">Coding Logistic Regression in Python From Scratch</a></h4>
-                <p class="separator">Aim is to code logistic regression for binary classification from scratch, using the raw mathematical knowledge and concept that we have.
+                <p class="separator">Aim is to code logistic regression for binary classification from scratch, using
+                  the raw mathematical knowledge and concept that we have.
                 </p>
 
               </div>
@@ -406,7 +771,95 @@
   <script src="js/main.js"></script>
 </body>
 
+<!-- Code For Chatbot Ends Here----------------------------------------------------------------------------------------------->
+
+
+<!-- =======================================================
+    Name: Om Rastogi  
+    ======================================================= -->
+
+</head>
+
+<body>
+  <button class="open-button" onclick="openForm();">Chat</button>
+  <div class="chat-popup" id="myForm">
+    <button type="button" class="close-button" onclick="closeForm();">Chat</button>
+    <div class="chatLayout" style="background-color: #fcfdff; border: 1px solid #ebedf0; width:400px;">
+
+      <div class="ChatHead" style="text-align: right;font-size: 8px; color: #ffffff; background-color: #1a5799;">
+        <span>Created by Om</span>
+      </div>
+
+      <div id="chat-box" style="overflow-y: scroll; height: 500px; padding: 10px 0px 0px 0px;">
+
+
+        <div class="message_holder">
+          <div class="chat-l">
+            <div class="mess mess-l">
+              <p><b>Ask me anything about Om Rastogi</b></p>
+            </div>
+            <div class="sp"></div>
+          </div>
+        </div>
+      </div>
+
+      <form action="" method="POST">
+        <input type="text" class="message" placeholder="Message" />
+        <input type="submit" value="Send" id='buttons' />
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+
+    var form = $('form').on('submit', function (e) {
+      e.preventDefault()
+      // let user_name = $( 'input.username' ).val()
+      let user_input = $('input.message').val()
+      console.log('catch message - ' + user_input)
+
+      if (user_input !== "") {
+        postData(user_input)
+        $('input.message').val('').focus()
+      }
+    })
+
+    function updateScroll() {
+      var element = document.getElementById("chat-box");
+      element.scrollTop = element.scrollHeight;
+    }
+
+    async function postData(message) {
+      var formdata = new FormData();
+      formdata.append("body", message);
+      var requestOptions = {
+        method: 'POST',
+        body: formdata,
+      };
+
+      $('div.message_holder').append('<div class="chat-r"><div class="sp"></div><div class="mess mess-r"><p>' + message + '</p></div></div>')
+
+      msg = await fetch("apicall.php", requestOptions)
+        .then(response => response.text())
+        .then(result => { console.log(result); return result; })
+        .catch(error => console.log('error', error));
+
+
+      $('div.message_holder').append('<div class="chat-l"><div class="mess mess-l"><p>' + msg + '</p></div><div class="sp"></div></div>')
+      updateScroll();
+    }
+
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+
+  </script>
+
+</body>
+
 </html>
-
-
-

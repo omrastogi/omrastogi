@@ -79,8 +79,8 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["OM RASTOGI"],
-      typeSpeed: 100,
+      strings: ["AN ENGINEER","A THINKER","OM RASTOGI"],
+      typeSpeed: 150,
       loop: true,
     });
   });

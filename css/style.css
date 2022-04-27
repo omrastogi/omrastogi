@@ -252,14 +252,16 @@ nav ul li a {
   text-align: left;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
 }
 
-.header-content h1 {
+#header .header-content h1 {
   font-size: 40px;
   font-weight: 700;
+  margin-top: 200px;
   margin-bottom: 10px;
+
   text-transform: uppercase;
   color: #000;
 }
@@ -279,10 +281,16 @@ nav ul li a {
   margin-right: 20px;
 }
 
-.header-content .list-social li i {
-  color: #fff;
-  font-size: 15px;
+.header-content .list-social li ion-icon{
+  color: #000000;
+  font-size: 20px;
 }
+
+.header-content .list-social download{
+  color: #000000;
+  font: 20px;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Aout-us
@@ -291,12 +299,12 @@ nav ul li a {
 #about {
   width: 100%;
   height: auto;
-  background: #f7f7f7;
-  padding-top: 190px;
+  background: #ffffff;
+  padding-top: 150px;
 }
 
 #about .div-img-bg {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   border: 20px solid #b8a07e;
 }
 
@@ -309,22 +317,28 @@ nav ul li a {
   object-fit: cover;
 }
 
+#about .about-descr{
+ margin-top: 60px;
+}
+
 #about .about-descr .p-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   font-size: 28px;
   text-align: left;
 }
 
 #about .about-descr .separator {
-  max-width: 80%;
-  margin-bottom: 0;
+  max-width: 50%;
+  margin-bottom: 40px;
   text-align: left;
 }
 
 /*-----------------------------------------------------------------------------------*/
 /*   Services
 /*-----------------------------------------------------------------------------------*/
-
+#experience .services-block{
+  margin-top: 2rem;
+}
 #services {
   background: #f7f7f7;
   position: relative;
@@ -333,6 +347,15 @@ nav ul li a {
 
 .owl-item {
   float: left;
+}
+.services-block .img-col{
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+}
+.services-block img{
+  width: 100%;
+  border-radius: 10px;
 }
 .services-block span {
   margin: 10px 0;
@@ -353,7 +376,7 @@ nav ul li a {
 
 .services-block i {
   font-size: 44px;
-  color: #b8a07e;
+  color: #000000;
   line-height: 44px;
 }
 
@@ -447,6 +470,15 @@ nav ul li a {
 
 .portfolio-thumbnail img {
   max-width: 100%;
+  border-radius: 15px;
+}
+
+.card-description h3{
+  margin-top: 1rem;
+}
+.card-description p{
+  margin-top: 3rem;
+  max-width: 90%;
 }
 
 /*-----------------------------------------------------------------------------------*/

@@ -83,6 +83,10 @@
     float: none;
     display: inline-block;
   }
+  
+  .services-block .img-col{
+   padding: 10px; 
+  }
 }
 
 /** Width between 767px to 0
@@ -154,6 +158,10 @@
     float: none;
     display: inline-block;
   }
+  
+  .services-block .img-col{
+   padding: 0; 
+  }
 }
 
 /** Width between 600px to 0
@@ -224,6 +232,13 @@
     margin-left: 0;
     float: none;
     display: inline-block;
+  }
+}
+
+@media (max-width: 575px) {
+  .services-block img{
+    width: 50%;
+    margin-left: 1.5rem;
   }
 }
 
