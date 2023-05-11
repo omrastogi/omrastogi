@@ -1,7 +1,7 @@
 
 # Hi there, I'm Om Rastogi 👋
 
-## I'm working as a Data Scientist
+## I'm working as a Senior Research Engineer
 
 - Jack of many
 - Mastering Machine Learning and Deep Learning  
