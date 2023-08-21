@@ -1,5 +1,5 @@
 
-# Hi there, I'm Om Rastogi 👋
+# Hi there, I'm Om 👋
 
 ## I'm working as a Research Engineer
 
