@@ -1,9 +1,8 @@
 
 # Hi there, I'm Om Rastogi 👋
 
-## I'm working as a Senior Research Engineer
+## I'm working as a Research Engineer
 
-- Jack of many
 - Mastering Machine Learning and Deep Learning  
 - Looking for collaborations in Research Projects - Academic/Industrial 
 
