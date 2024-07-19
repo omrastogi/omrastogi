@@ -1,10 +1,7 @@
 
 # Hi there, I'm Om 👋
 
-## I'm working as a Research Engineer
-
-- Mastering Machine Learning and Deep Learning  
-- Looking for collaborations in Research Projects - Academic/Industrial 
+- Looking for interesting computer vision problem   
 
 <br>
 
